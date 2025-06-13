@@ -1,5 +1,5 @@
 server:
-  port: 10379
+  port: ${PORT:10378}
 
 spring:
   cloud:
