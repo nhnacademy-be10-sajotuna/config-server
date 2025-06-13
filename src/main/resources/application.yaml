@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/nhnacademy-be10-sajotuna/config-repo
           default-label: dev
           username: flashdragon
-          password: ${{ secrets.CONFIG_TOKEN }}
+          password: ${CONFIG_TOKEN}
   application:
     name: config
 
