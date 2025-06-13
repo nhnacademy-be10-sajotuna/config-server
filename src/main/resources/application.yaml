@@ -12,3 +12,9 @@ spring:
           password: ${{ secrets.CONFIG_TOKEN }}
   application:
     name: config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,shutdown
