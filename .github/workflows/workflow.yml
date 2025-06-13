@@ -7,8 +7,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      CONFIG_TOKEN: ${{ secrets.CONFIG_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,5 +39,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            export CONFIG_TOKEN=${{ secrets.CONFIG_TOKEN }}
             chmod +x ~/app/startup.sh
             ~/app/startup.sh
